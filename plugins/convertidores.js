@@ -9,7 +9,7 @@ let usuario = global.db.data.users[m.sender]
 
 async function efec(conn, command, mime, quoted, exec, prefix, m, from) {
 try {  
-if (global.db.data.users[m.sender].registered < true) return m.reply(info.registra)
+
 if (global.db.data.users[m.sender].banned) return
 await conn.sendPresenceUpdate('recording', m.chat)
 let set  
@@ -40,7 +40,7 @@ m.reply(`${info.error} ${e}`)
 console.log(e)}}
 
 async function efect2(m, text, prefix, command, conn) {
-if (global.db.data.users[m.sender].registered < true) return m.reply(info.registra)
+
 if (global.db.data.users[m.sender].banned) return
 if (!text) return m.reply(`\`🪄 ${usuario.Language === 'es' ? '𝐋𝐈𝐒𝐓𝐀𝐒 𝐃𝐄 𝐋𝐎𝐆𝐎𝐒' : 
 usuario.Language === 'en' ? 'LOGO LISTS' :  
