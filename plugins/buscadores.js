@@ -15,10 +15,10 @@ const os = require('os')
 let user = global.db.data.users[m.sender]
 
 async function buscadores(m, command, conn, text, budy, from, fkontak, prefix, args, q, quoted, lang, lolkeysapi) {
-if (global.db.data.user
+
 if (global.db.data.users[m.sender].banned) return
 if (command == 'yts' || command == 'ytsearch') {
-if (global.db.data.user
+
 if (!text) return m.reply(`${lenguaje.lengua.ejem}\n${prefix + command} anime`)
 const yts = require("youtube-yts");
 const search = await yts(text);
