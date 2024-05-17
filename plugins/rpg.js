@@ -82,7 +82,7 @@ let sn = createHash('md5').update(m.sender).digest('hex')
 conn.fakeReply(m.chat, sn, '0@s.whatsapp.net', `${lenguaje.rpg.myns2}`, 'status@broadcast')}}
 
 async function rpg(m, command, participants, args, sender, pushname, text, conn, fkontak, replace, who) {
-if (global.db.data.users[m.sender].registered < true) return m.reply(info.registra)
+
 if (global.db.data.users[m.sender].banned) return
 let usuario = global.db.data.users[m.sender]
 if (command == 'lb' || command == 'leaderboard') {
