@@ -12,7 +12,7 @@ const os = require('os')
 let usuario = global.db.data.users[m.sender]
 
 const menu = (m, command, conn, prefix, pushname, sender, pickRandom, fkontak) => {
-if (global.db.data.users[m.sender].registered < true) return m.reply(info.registra)
+
 if (global.db.data.users[m.sender].banned) return 
 let user = global.db.data.users[m.sender]
 let totalreg = Object.keys(global.db.data.users).length
