@@ -16,7 +16,7 @@ let cafi = "https://whatsapp.com/channel/0029VaFVSkRCMY0KFmCMDX2q"
 let cafi2 = "https://chat.whatsapp.com/FBtyc8Q5w2iJXVl5zGJdFJ"
 
 async function info(command, conn, m, speed, sender, fkontak, pickRandom, pushname, from, msg, text) {
-if (global.db.data.users[m.sender].registered < true) return m.reply(info.registra)
+
 if (global.db.data.users[m.sender].banned) return
 let usuario = global.db.data.users[m.sender]
 if (command == 'estado' || command == 'infobot') {
@@ -28,7 +28,7 @@ let me = m.sender
 var timestamp = speed();  
 var latensi = speed() - timestamp  
 const user = [...new Set([...global.listJadibot.filter((conn) => conn.user && conn.ws.socket && conn.ws.socket.readyState !== ws.CLOSED).map((conn) => conn)])];
-if (global.db.data.users[m.sender].registered < true) return m.reply(info.registra)
+
 let stateRun = `╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈⪩
 ┊┏━━━━━━━━━━━━━━•
 ┊┃ *${lenguaje.info.text}*
