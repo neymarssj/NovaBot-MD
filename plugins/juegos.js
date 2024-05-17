@@ -16,7 +16,7 @@ let tekateki = global.db.data.game.tekateki = []
 let usuario = global.db.data.users[m.sender]
 
 async function game(m, budy, command, text, pickRandom, pushname, conn, participants, sender, who, body, ra) {
-if (global.db.data.users[m.sender].registered < true) return m.reply(info.registra)
+
 if (global.db.data.users[m.sender].banned) return
 if (budy.includes(`Bot`) || budy.includes(`simi`)) {   
 if (!text) return m.reply(`*${lenguaje['smsWel']()} ${pushname} 👋 ${usuario.Language === 'es' ? 'Quieres hablar un rato conmigo? usar de esta forma*\n\n• *Ejemplo:* #Bot Hola' : usuario.Language === 'en' ? 'Do you want to talk to me for a while? use this way*\n\n• *Example:* #Bot Hello' : usuario.Language === 'ar' ? ' هل تريد التحدث معي لفترة من الوقت؟ استخدم هذه الطريقة*\n\n• *مثال:* #Bot Hello' : usuario.Language === 'pt' ? 'Você quer conversar um pouco comigo? use desta forma*\n\n• *Exemplo:* #Bot Olá' : usuario2.Language === 'id' ? 'Apakah Anda ingin berbicara dengan saya sebentar? gunakan cara ini*\n\n• *Contoh:* #Bot Halo' : usuario.Language === 'rs' ? 'Хочешь поговорить со мной немного? используйте этот способ*\n\n• *Пример:* #Bot Hello' : usuario.Language}`) 
